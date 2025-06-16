@@ -56,14 +56,14 @@ session_start();
 
     <section class="seccion-recuperar-contrasena">
         <h1>Recuperar Contraseña</h1>
-        <p>Por favor, proporciona el correo electrónico de tu cuenta para proceder con el restablecimiento de contraseña.</p>
-        <div class="formulario-recuperar-contrasena">
-            <?php
-            if (isset($_SESSION['errorRecuperarContrasenaCliente'])) {
-                echo '<p class="error-mensaje-rc">' . $_SESSION['errorRecuperarContrasenaCliente'] . '</p>';
-                unset($_SESSION['errorRecuperarContrasenaCliente']);
+        <p class="informacion-recuperar-contrasena">Por favor, proporciona el correo electrónico de tu cuenta para proceder con el restablecimiento de contraseña.</p>
+                    <?php
+            if (isset($_SESSION['errorRecuperarContrasenaUsuario'])) {
+                echo '<p class="error-mensaje-rc">' . $_SESSION['errorRecuperarContrasenaUsuario'] . '</p>';
+                unset($_SESSION['errorRecuperarContrasenaUsuario']);
             }
             ?>
+        <div class="formulario-recuperar-contrasena">
             <form action="backend/recuperar-contrasena.php" method="post">
                 <div class="correo-electronico-usuario">
                     <label for="correoElectronicoUsuario">Correo Electrónico<span>*</span></label><br>

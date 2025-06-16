@@ -85,13 +85,14 @@ if (isset($_GET['token_usuario'])) {
     <section class="seccion-generar-nueva-contrasena">
         <div class="formulario-generar-nueva-contrasena">
             <form action="backend/generar-nueva-contrasena.php" method="post">
+                <input type="hidden" name="id_usuario" value="'. $idUsuario .'">
                 <div class="nueva-contrasena-usuario">
                     <label for="nuevaContrasenaUsuario">Nueva Contraseña<span>*</span></label><br>
-                    <input type="password" name="nueva-contrasena-usuario" id="nuevaContrasenaUsuario" required>
+                    <input type="password" name="nueva_contrasena_usuario" id="nuevaContrasenaUsuario" required>
                 </div>
                 <div class="confirmar-nueva-contrasena-usuario">
                     <label for="confirmarNuevaContrasenaUsuario">Confirmar Nueva Contraseña<span>*</span></label><br>
-                    <input type="password" name="confirmar-nueva-contrasena-usuario" id="confirmarNuevaContrasenaUsuario" required>
+                    <input type="password" name="confirmar_nueva_contrasena_usuario" id="confirmarNuevaContrasenaUsuario" required>
                 </div>
                     <div id="errorValidarNuevaContrasenaUsuario" class="error-mensaje-generar-nueva-contrasena">Las contraseñas no coinciden</div>
                 <button id="generarNuevaContrasenaUsuario" type="submit">Generar Nueva Contraseña</button>

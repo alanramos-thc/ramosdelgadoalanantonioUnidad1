@@ -47,8 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div style="width: 450px; background-color: white; margin: 0 auto;">
                 <div style="display: flex; justify-content: space-between; align-items: center; background-color: #e977a8; padding: 20px;">
                     <h1 style="color: white; font-family: Roboto, sans-serif; font-weight: 800; font-size: 18px; text-align: center; flex: 1;">¡Recupera el Acceso a tu Cuenta en SquidGameFans!</h1>
-                    <div style="background-color: white; border-radius: 19px; width: 90px; height: 85px; display: flex; align-items: center; justify-content: center; margin-left: 20px;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Squid_Game_2021_vector_logo_english.svg" loading="lazy" alt="SquidGameFans" style="width: auto; height: 40px;">
+                    <div style="background-color: white; border-radius: 19px; width: 90px; height: 85px; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://logoeps.com/wp-content/uploads/2021/12/squid-game-logoeps.png" loading="lazy" alt="SquidGameFans" style="width: auto; height: 70px; margin-top: 5px;">
                     </div>
                 </div>
                 <div style="font-size: 16px; font-family: DM Sans, sans-serif; color: #020132; padding: 20px;">

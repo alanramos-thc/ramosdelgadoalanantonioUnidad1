@@ -53,7 +53,7 @@
 
     <section class="seccion-registrarse">
         <div class="formulario-registrarse">
-            <form action="backend/registrarse.php" method="post">
+            <form action="backend/registrarse.php" method="post" id="form">
                 <div class="nombre-usuario">
                     <label for="nombreUsuario">Nombre de Usuario<span>*</span></label><br>
                     <input type="text" name="nombre_usuario" id="nombreUsuario" required>
@@ -65,16 +65,21 @@
                     <div id="errorVerificarCorreoElectronicoUsuario" class="error-mensaje-registrarse-ceu"></div>
                 <div class="contrasena-usuario">
                     <label for="contrasenaUsuario">Contraseña<span>*</span></label><br>
-                    <input type="password" name="contrasena-usuario" id="contrasenaUsuario" required>
+                    <input type="password" name="contrasena_usuario" id="contrasenaUsuario" required>
                 </div>
                 <div class="confirmar-contrasena-usuario">
                     <label for="confirmarContrasenaUsuario">Confirmar Contraseña<span>*</span></label><br>
-                    <input type="password" name="confirmar-contrasena-usuario" id="confirmarContrasenaUsuario" required>
+                    <input type="password" name="confirmar_contrasena_usuario" id="confirmarContrasenaUsuario" required>
                 </div>
                     <div id="errorValidarContrasenaUsuario" class="error-mensaje-registrarse-ccu">Las contraseñas no coinciden</div>
                 <button id="registrarse" type="submit">Registrarse</button>
             </form>
             <script>
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    document.getElementById('form').reset();
+  }
+});
                         $(document).ready(function() {
                           function validarFormularioRegistrarse() {
                             var correoElectronicoUsuario = $("#correoElectronicoUsuario").val();

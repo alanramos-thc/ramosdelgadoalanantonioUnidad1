@@ -132,7 +132,7 @@ session_start();
                 y no podríamos estar más emocionados.</p>
         </div>
         <div class="video-nuevo-trailer">
-            <iframe width="560" height="315" 
+            <iframe 
                 src="https://www.youtube.com/embed/-0Fr1blovx8" 
                 title="Tráiler oficial de Squid Game" 
                 frameborder="0" 
@@ -171,13 +171,13 @@ session_start();
             <h1>Temporadas</h1>
         </div>  
         <div class="contenido-temporadas">
-            <a href="#">
+            <a href="temporada_1.php">
             <div class="card-temporada">
                 <img src="assets/img/temporada-uno.webp" alt="Temporada 1">
                 <div class="card-temporada-titulo">Temporada 1</div>
             </div>
             </a>
-            <a href="#">
+            <a href="temporada_2.php">
                 <div class="card-temporada">
                     <img src="assets/img/temporada-dos.webp" alt="Temporada 2">
                     <div class="card-temporada-titulo">Temporada 2</div>
@@ -268,6 +268,23 @@ session_start();
         </div>
     </section>
 
+    <section class="seccion-sorteo">
+      <p class="informacion-sorteo">¡Participa en el sorteo de una cuenta de Netflix! El ganador será anunciado el 26 de junio. ¡No te lo pierdas!</p>
+      
+        <?php
+            if (isset($_SESSION['errorSorteo'])) {
+                echo '<p class="error-mensaje-sorteo">' . $_SESSION['errorSorteo'] . '</p>';
+                unset($_SESSION['errorSorteo']);
+            }
+        ?>
+      <div>
+        <form action="backend/participar-sorteo.php" method="post" class="correo-sorteo">
+                <input type="email" name="correo_electronico_sorteo" id="correoElectronicoSorteo" required>
+                <button type="submit">Participar</button>
+        </form>
+      </div>
+    </section>
+
     <section class="seccion-faq">
         <div class="titulo-faq">
             <h1>Preguntas Frecuentes</h1>
@@ -309,7 +326,7 @@ session_start();
     <section class="seccion-contactenos-pagina" id="contactenos">
             <div class="contenedor-contactenos-pagina">
             <div class="formulario-contactenos-pagina">
-                <form action="emails/enviar-correo-de-contacto.php" method="post">
+                <form action="backend/enviar-correo-de-contacto.php" method="post">
                     <div class="nombre-correo-electronico">
                         <div class="nombre">
                             <label for="nombre">Nombre<span>*</span></label><br>
@@ -383,6 +400,18 @@ session_start();
     <div class="copyright">
         <p>© 2025 SquidGameFans. Todos los derechos reservados.</p>
     </div>
+
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/684fc0e157eabb190a266566/1itrois74';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
 </body>
 </html>
 
