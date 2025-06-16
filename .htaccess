@@ -1,0 +1,2 @@
+DirectoryIndex inicio.php
+ErrorDocument 404 /squidgamefans/404.php
